@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>История NAVI - NAVI</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+</head>
+<body>
+&nbsp;<div class="text">
+    <main>
+      <h1>NAVI</h1>
+        <p>NATUS VINCERE commonly referred as abbreviated name NAVI (formerly Na`Vi), is an esports organization. Founded in 2009, the organization has teams and players competing in various games, such as Counter-Strike 2, Dota 2, FIFA, Brawl Stars, World of Tanks, Paladins, PlayerUnknown's Battlegrounds, Clash of Clans, Apex Legends, Rainbow Six Siege, Mobile Legends: Bang Bang, Fortnite, and VALORANT.</p>
+  
+        </details>&nbsp;<h2>Хронология становления NAVI</h2>
+          <p class="news"><span class="date">15–17 January 2010 - </span>IEM 4 European Finals</p>
+          <p class="news"><span class="date">30–31 January 2010 - </span>Arbalet Asia</p>
+          <p class="news"><span class="date">3 April 2010 - </span>EM 4 World Championship Finals (W3C)</p>
+          <p class="news"><span class="date">28–29 August 2010 - </span>ASUS Summer 2010</p>
+          <p class="news"><span class="date">25–27 November 2010 - </span>Dreamhack Winter 2010</p>
+          <p class="news"><span class="date">17–21 August 2011 - </span>The International 2011</p>
+          <p class="news"><span class="date">8 July 2014 – 21 July 2014 - </span>The International 2014</p>
+          <p class="news"><span class="date">21 November 2015 – 22 November 2015 - </span>IEM Season X - San Jose</p>
+    </main>
+  </div> 
+</body>
+</div>
+<body>
+<div class="buttons-container">
+<<button id="window Button">Window</button>
+<<button id="navigator Button">Navigator</button>
+<<button id="location Button">Location</button>
+<<button id="screen Button">Screen</button>
+</div>
+<div class="buttons-container">
+  <button id="hideButton">Скрыть средний слой</button>
+  <button id="showButton" onclick="getimage()">Показать средний слой</button>
+  <button id="swapLayersButton" onclick="swap()">Поменять слои местами</button>
+</div>
+<div class="image-container">
+  <img id="image1" class="image" src="/image/image1.jpg" alt="Рисунок l" width="300" height="200" style="z-index: 1; margin-top: 20px;" name="Рисунокl">
+  <img id="image2" class="image" src="/image/image2.jpg" alt="Рисунок 2" width="300" height="200" style="z-index: 2; margin-top: 20px;" name="Рисунок2">
+  <img id="image3" class "image" src="/image/image3.jpg" alt="Рисунок 3" width="300" height="200" style="z-index: 3; margin-top: 20px;" name="Рисунок3">
+</div>
+</body>
+</html>
+
+<script>
+  // Обработчик для кнопки "Показать средний слой"
+  function getimage () {
+    var showButton = document.getElementById("showButton");
+    showButton.addEventListener("click", function() {
+      
+      var midmage = document.getElementById("image2");
+      midmage.style.visibility = "visible";
+      console.log("hi");
+    });
+  }
+
+  // Обработчик для кнопки "Скрыть средний слой"
+  var hideButton = document.getElementById("hideButton");
+                hideButton.addEventListener("click", function() {
+                  // Находим рисунок в среднем слое и скрываем его
+                  var middleImage = document.getElementById("image2");
+                  middleImage.style.visibility = "hidden";
+                });
+  
+    function swap() {
+      // Обработчик для кнопки "Поменять слои местами"
+document.getElementById("swapLayersButton").addEventListener("click", function() {
+  var bottomImage = document.getElementById("image1");
+  var topImage = document.getElementById("image3");
+  
+  var zIndexBottom = bottomImage.style.zIndex;
+  var zIndexTop = topImage.style.zIndex;
+
+  bottomImage.style.zIndex = zIndexTop;
+  topImage.style.zIndex = zIndexBottom;
+});
+
+
+
+
+
+
+
+
+};
+  
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var lastModified = new Date(document.lastModified);
+  alert("Document has been changed " + lastModified.toLocaleString());
+  });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function()
+    {
+    // Обработчик для кнопки "Navigator"
+    var navigatorButton = document.getElementById("navigator Button");
+    navigatorButton.addEventListener("click", function() {
+    // Получаем информацию о браузере из объекта navigator
+    var browserInfo = "browser type: " + navigator.appName + "\n";
+    browserInfo += "browser name: " + navigator.appVersion + "\n";
+    browserInfo += "Platform: " + navigator.platform + "\n";
+    browserInfo += "User-Agent: " + navigator.userAgent;
+    // Выводим информацию о браузере в окно сообщения
+    alert (browserInfo);
+    });
+    });
+    </script>
+
+
+
+
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function()
+      {
+      // Обработчик для кнопки "Location"
+      var locationButton = document.getElementById("location Button");
+      locationButton.addEventListener("click", function(){
+      // Получаем информацию о местоположении (location)
+      var username = prompt("input ur name:");
+      var locationInfo = "user's name: " + username + "\n";
+      locationInfo += "Address of the uploaded document: " + window.location.href;
+      // Выводим информацию о местоположении в окно сообщения
+      alert (locationInfo) ;
+      });
+      });
+      </script>
+
+
+
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        // Обработчик для кнопки "Screen"
+        var screenButton = document.getElementById("screen Button");
+        screenButton.addEventListener("click", function(){
+        // Получаем информацию о параметрах экрана (screen)
+        var screenInfo= "Screen width:" + window.screen.width + "pixels\n";
+        screenInfo += "Screen height: " + window.screen.height + " pixels\n";
+        screenInfo += "Color depth: " + window.screen.colorDepth + " bit";
+        // Выводим информацию о параметрах экрана в окно подтверждения
+        var confirmation = confirm(screenInfo) ;
+        // Если пользователь нажал "Ок", повторно выводим информацию в окне браузера
+        if (confirmation) {
+        alert (screenInfo) ;
+        }
+        });
+        });
+        </script>
+
+
+
+
+        <script>
+           // Find the header and add an onMouseOver event handler
+          var header = document.querySelector("hl");
+          header.onmouseover = function() {
+          window.status = "Читай текст!";
+          }
+          // Add an onMouseOut event handler to return to the previous row state
+          header.onmouseout = function() {
+          window.status= "Продолжение работы";
+          }
+          </script>
+
+
+          <script>
+          // Find the first paragraph and add an onMouseOver event handler
+          var firstParagraph = document.querySelector("p");
+          firstParagraph.onmouseover =
+          function() {
+          this.style.color = "yellow"; // Изменить цвет символов
+          this.style.fontFamily = "Arial, sans-serif"; // Изменить шрифт
+          }
+          //Add an onMouseOut event handler to return to the original view
+          firstParagraph.onmouseout = function() {
+          this.style.color = ""; // Вернуть цвет символов к первоначальному
+          this.style.fontFamily = ""; // Вернуть шрифт к первоначальному
+          }
+          </script>
+
+
+          <script>
+            function modifySecondParagraph() {
+            // Find the second paragraph
+            var secondParagraph = document.querySelectorAll("p") [1];
+            //
+            //Изменить стили
+            secondParagraph.style.marginRight = "3cm"; // Величина правого поля
+            secondParagraph.style.textIndent = "2.5cm"; // Отступ первой строки
+            }
+            function resetSecondParagraph() {
+            // Find the second paragraph
+            var secondParagraph = document.querySelectorAll("p") [1];
+            // Reset styles to their original values
+            secondParagraph.style.marginRight = "";
+            secondParagraph.style.textIndent = "";
+            }
+            // Add onMouseOver and onMouseOut event handlers
+            var secondParagraph = document.querySelectorAll("p") [1];
+            secondParagraph.onmouseover = modifySecondParagraph;
+            secondParagraph.onmouseout = resetSecondParagraph;
+            </script>
+
+
+            <table id="myTable">
+              <tr>
+              <td class="normal">cell 1</td>
+              <td class="normal">cell 2</td>
+              </tr>
+              <tr>
+              <td class="normal">cell 3</td>
+              <td class="normal">cell 4</td>
+              <script>
+                // We get all the cells of the table
+                var cells = document.querySelectorAll("#myTable td");
+                // Adding event handlers for hovering the mouse and moving the mouse away
+                cells.forEach(function(cell){
+                cell.addEventListener("mouseover", function() {
+                // Applying alternative styles when hovering the mouse
+                cell.className = "alternative";
+                }) ;
+                cell.addEventListener("mouseout", function() {
+                // Restoring the original styles when moving the mouse away
+                cell.className ="normal";
+                }) ;
+                }) ;
+                </script>
+                <script>
+                
+
+                
+              </script>
+              
+              
+              
+              
+</html>
